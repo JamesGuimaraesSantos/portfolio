@@ -1,11 +1,19 @@
-:root{ 
-    --bgColorGreen1: rgb(11,212,123);
-    --bgColorGreen2: rgb(11,222,189);
-    --bgColorBlue1: rgb(0,176,200);
-    --bgColorBlue2: rgb(11,142,222);
-    --bgColorBlue3: rgb(11,82,212);
+:root{
+    --hoverYellow: #ffd489;
+    --textPink: #ff72f7;
+    --textBlue: #c2ffe6;
+    --bgGray: #554f6e;
+}
+.borda{
+    border: 2px solid red;
+}
+.espande100{
+    height: 100%;
 }
 /* - - - - - - - Formatação geral de tags - - - - - - - */
+html{
+    font-size: 16px;
+}
 *{
     box-sizing: border-box;
     margin: 0px;
@@ -14,178 +22,84 @@
 }
 body{
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
     color: white;
 }
-.borda{
-    border: 1px solid red;
-}
-/* - - - - - - - Tipografia - - - - - - - */
-h1{
-    font-family: 'Quicksand', sans-serif;
-    color: var(--bgColorGreen1);
-    font-size: 4rem;
-}
-p{
-    font-size: 1.15rem;
-}
-/* - - - - - - - Inicio topo do site  - - - - - - - */
-header{
-    background: rgb(19,1,24);
-    background: linear-gradient(137deg, rgba(19,1,24,1) 19%, rgba(10,36,1,1) 100%);
-}
-#conteudoDestaque{
-    padding-left: 4rem;
-}
-#paragrafoRick{
-    margin-bottom: -4rem;
-    font-style: italic;
-}
-        /* icones */
+
+/* - - - - - - - Icones  - - - - - - - */
 i{
     font-size: 2rem;
-    color: white;
+    color: var(--bgGray);
+    margin-left: 1rem;
 }
 i:hover{
-    color: var(--bgColorGreen1);
+    color: var(--hoverYellow);
 }
-i.fa-github{
-    margin-right: 1rem;
+i.fa-linkedin, i.fa-html5 {
+    margin-left: 0px
 }
-        /* link */
-#navegacaoPrincipal a{
-    color: white;
+.iconActive{
+    color: var(--textBlue)
+}
+
+/* - - - - - - - Links  - - - - - - - */
+a{
     font-weight: bold;
+    color: white;
 }
-#navegacaoPrincipal  a:hover{
-    color: var(--bgColorGreen1);
-}
-a.ativo{
-    background-color: var(--bgColorBlue2) ;
-    border-radius: 6px;
+a:hover{
+    color: var(--hoverYellow);
 }
 #linkSobre{
     padding-left: 5rem;
 }
-.fadeInLeft {
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+.linkActive{
+    background-color: var(--bgGray);
+    border-radius: 0.4rem;
 }
-    @-webkit-keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-    @keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-} 
-.fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-    @-webkit-keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-    @keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-} 
 
-@media (max-width: 415px){
-    h1{
-        font-size: 2rem;
+/* - - - - - - - Tipografia - - - - - - - */
+h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 4rem;
+    color: var(--textPink);
+    letter-spacing: 0.25rem;
+}
+p{
+    font-size: 1.15rem;
+}
+
+/* - - - - - - - Topo do site  - - - - - - - */
+header{
+    background: rgb(16,0,17);
+    background: linear-gradient(94deg, rgba(16,0,17,1) 8%, rgba(0,0,0,1) 93%);
+}
+#ladoEsquerdoTopo{
+    padding-left: 3rem;
+}
+
+@media (max-width: 575.98px){
+    html{
+        font-size: 12px;
     }
-    p{
-        font-size: 0.5rem;
-    }
-    #areaRickAndMorty{
+    #ladoDireitoTopo{
         display: none;
     }
 }
-@media (min-width: 416px) and (max-width: 575.98px) { 
-    h1{
-        font-size: 3rem;
-    }
-    p{
-        font-size: 1rem;
-    }
-
-    #areaRickAndMorty{
-        display: none;
-    }
- }
-
 @media (min-width: 576px) and (max-width: 767.98px) {
-    h1{
-        font-size: 2.5rem;
+    html{
+        font-size: 8px;
     }
-    p{
-        font-size: 0.75rem;
-    }
-    #linkSobre{
-        padding-left: 3rem;
-    }
-    #paragrafoRick{
-        margin-bottom: -1rem;
-    }
-  }
+}
 
-@media (min-width: 768px) and (max-width: 991.98px) { 
-    h1{
-        font-size: 3rem;
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html{
+        font-size: 12px;
     }
-    p{
-        font-size: 1rem;
-    }
-    #paragrafoRick{
-        margin-bottom: -2rem;
-    }
- }
+}
 
-@media (min-width: 992px) and (max-width: 1199.98px) {  
-    #paragrafoRick{
-        margin-bottom: -3rem;
-    }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
 }
 
 @media (min-width: 1200px) and (max-width: 1399.98px) { 
