@@ -1,0 +1,42 @@
+/* Formatação do header*/
+@media (max-width: 575.98px) {
+    html, body, header, .expande100{
+        height: auto;
+    }
+    html{
+        font-size: 12px; 
+     }
+     #navegacaoSecundariaVisivel{
+        margin-bottom: 8rem;
+    }
+    h3{
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    html, body, header, .expande100{
+        height: auto;
+    }
+    html{
+       font-size: 14px; 
+    }
+    #navegacaoSecundariaVisivel{
+        margin-bottom: 8rem;
+    }
+    h3{
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html{
+        font-size: 13px; 
+     }
+     #tituloPrincipal{
+        padding-top: 5rem;
+     }
+     #avatar{
+        width: 75%;
+    }
+}
