@@ -23,17 +23,3 @@ let observeMenuSecundario = new IntersectionObserver((entries) => {
 })
 observeMenuSecundario.observe(document.querySelector("#navegacaoSecundariaVisivel"))
 
-let observeHeader = new IntersectionObserver((entries) =>{
-    console.log(entries)
-    if (entries[0].isIntersecting === true ){
-        ladoEsquerdoHeader.classList.toggle("fadeInLeft")
-        ladoDireitoHeader.classList.toggle("fadeInRight")
-    } else{
-        ladoEsquerdoHeader.classList.toggle("fadeInLeft")
-        ladoDireitoHeader.classList.toggle("fadeInRight")
-    }
-},{
-    threshold: 0.5
-})
-
-observeHeader.observe(document.querySelector("header"))

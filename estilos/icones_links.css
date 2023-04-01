@@ -2,9 +2,8 @@
 i{
     font-size: 2rem;
 }
-
 i.fa-star{
-    color: var(--texBlue2);
+    color: var(--colorBlue2);
     transition: cor 1s, transform 0.5s;
     transform: scale(1);
 }
@@ -15,8 +14,6 @@ i.fa-star:hover{
 .mensagemAvisoCoracao{
     display: none;
 }
-
-
 
 /* Icones do menu principal */
 #navegacaoPrincipal i{
@@ -37,6 +34,7 @@ i.fa-star:hover{
     margin-top: 6rem;
 }
 
+/*Animação das habilidades*/
 ul{
     display: flex;
     gap: 40px;
@@ -51,12 +49,10 @@ ul li{
     width: 80px;
     height: 80px;
 }
-
 ul li .fa-brands{
     font-size: 4rem;
     color: transparent;
 }
-
 ul li::before{
     content: "\f13b";
     font-family: fontAwesome;
@@ -75,9 +71,7 @@ ul li::before{
 }
 ul li:hover::before{
     height: 100%;
-    
 }
-
 ul li:nth-of-type(2)::before{
     content: "\f836";
 }
@@ -87,121 +81,52 @@ ul li:nth-of-type(3)::before{
 ul li:nth-of-type(4)::before{
     content: "\f3b9";
 }
-
-
-
-/*
-#barraHorizontalMobile i{
-    font-size: 4rem;
-}
-#iconesHabilidades{
-    position: relative;
-}
-
-i.fa-html5{
-    color: #FF0000;
-    color: transparent;
-    -webkit-text-stroke: 2px #FF0000;
-}
-i.fa-html5::before{
-    content: "\f13b";
-    font-family: fontAwesome;
-    border-bottom: 4px solid black;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-i.fa-bootstrap{
-    color: #AB07E4;
-    color: transparent;
-    -webkit-text-stroke: 2px #AB07E4;
-}
-i.fa-bootstrap:before{
-    content: "\f13b";
-    font-family: fontAwesome;
-    border-bottom: 4px solid black;
-    position: absolute;
-    top: 0;
-    left: 4rem;
-}
-
-i.fa-css3{
-    color: #0558FA;
-    color: transparent;
-    -webkit-text-stroke: 2px #0558FA;
-}
-i.fa-css3:before{
-    content: "\f13b";
-    font-family: fontAwesome;
-    border-bottom: 4px solid black;
-    position: absolute;
-    top: 0;
-    left: 8rem;
-}
-
-i.fa-js{
-    content: "\f13b";
-    font-family: fontAwesome;
-    border-bottom: 4px solid black;
-    position: absolute;
-    top: 0;
-}
-i.fa-js::before{
-    content: "\f13b";
-    font-family: fontAwesome;
-    border-bottom: 4px solid black;
-    position: absolute;
-    top: 0;
-    left: 12rem;
-}
-*/
-.icones-topo i{
-    color: var(--bgGray);
+.icones-topo i{ /*São os icones na parte superior da página*/
+    color: var(--colorGray2);
     margin-left: 1rem;
     transition: color 1s, transform 0.5s;
     transform:  translateY(0) scale(1); 
 }
-.icones-topo i:hover{
-    color: var(--texBlue2);
+.icones-topo i:hover, .icon-link-projeto  i:hover {
+    color: var(--colorBlue2);
     transform: translateY(-5px) scale(1.5);
 }
 .icones-topo i.icon-ativo{
-    color: var(--textYellow);
+    color: var(--colorYellow);
 }
 .icones-topo i.fa-heart:hover{
     color: red;
 }
-
 .icon-link-projeto  i{ /*São os icones que levam ao projeto online*/
-    color: var(--textPink);
+    color: var(--colorPink);
+    transition: color 0.5s, transform 0.5s;
+    transform:  translateY(0) scale(1); 
 }
-
 
 /* - - - - - - - Links  - - - - - - - */
 a{
     font-weight: bold;
-
     text-decoration: none;
 }
-
 .link-sobre, .link-projetos{
     color: white;
     width: 6rem;
     border-radius: 4px;
     transform: scale(1);
     transition: border 0.5s;
-   
 }
 .link-sobre:hover, .link-projetos:hover{
-    color: var(--textPink);
+    color: var(--colorPink);
     transform: scale(1.2);
     border: 1px solid transparent;
 }
 .link-sobre{
-    border: 1px solid var(--textYellow);   
+    border: 1px solid var(--colorYellow);   
     
 }
 .link-projetos{
-    border: 1px solid var(--texBlue2);
+    border: 1px solid var(--colorBlue2);
+}
+.estrela-vertical{
+    writing-mode: vertical-rl;
 }
